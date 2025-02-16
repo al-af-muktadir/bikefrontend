@@ -30,7 +30,7 @@ Live-LinkURL: https://bikefrontend.vercel.app
 ## 🚀 Installation
 ```sh
 # Clone the repository
-git clone <Copy the link>"
+git clone <Copy the link>
 cd bike-shop
 
 # Install dependencies
