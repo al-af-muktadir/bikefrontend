@@ -82,7 +82,7 @@ const Register = () => {
       <Helmet>
         <title>Register</title>
       </Helmet>
-      <NavbarLogin x={"Register"} />
+      <NavbarLogin />
       <div className="flex items-center justify-center relative top-20 bg-amber-50   ">
         <div className=" w-full max-w-md p-8 bg-white shadow-lg rounded-2xl">
           <h2 className="text-3xl font-semibold text-center text-brown-700 mb-6">

@@ -24,7 +24,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="py-10 bg-gray-100 mt-10">
+    <div className="py-10 bg-[#ECE3D2] mt-10">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
           What Our Customers Say

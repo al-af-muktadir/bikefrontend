@@ -24,11 +24,13 @@ const AdminDashboard = () => {
         <h2 className="text-xl font-bold mb-4">Admin Dashboard</h2>
         <ul className="menu text-base-content space-y-2">
           {[
+            { to: "HomeDash", label: "All Information" },
             { to: "createproduct", label: "Create Product" },
             { to: "manageproduct", label: "Manage Product" },
             { to: "manageorder", label: "Manage Orders" },
             { to: "manageuser", label: "Manage User Deactivation" },
             { to: "totalrevenue", label: "Total Revenue" },
+            { to: "newsLatter", label: "Manage News" },
           ].map(({ to, label }) => (
             <NavLink
               key={to}
@@ -55,7 +57,7 @@ const AdminDashboard = () => {
           >
             <FaBars size={24} />
           </button>
-          <NavbarLogin x={"Admin Dashboard"} />
+          <NavbarLogin />
         </div>
 
         <div className="pt-16 px-4 md:max-w-4xl mx-auto">

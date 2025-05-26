@@ -26,6 +26,8 @@ const UserDashboard = () => {
           {[
             { to: "settings", label: "ChangePassword" },
             { to: "orders", label: "My Order" },
+            { to: "profile", label: "My Profile" },
+            { to: "information", label: "All Information" },
           ].map(({ to, label }) => (
             <NavLink
               key={to}
@@ -52,7 +54,7 @@ const UserDashboard = () => {
           >
             <FaBars size={24} />
           </button>
-          <NavbarLogin x={"User Dashboard"} />
+          <NavbarLogin />
         </div>
 
         <div className="pt-16 px-4 md:max-w-4xl mx-auto">

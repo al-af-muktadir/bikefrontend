@@ -19,7 +19,7 @@ const ProductDetails = () => {
   if (isLoading) {
     <span className="loading loading-spinner text-warning"></span>;
   } else {
-    bike = data.data[0];
+    bike = data?.data[0];
     //(bike);
   }
   const handleAddToCart = async () => {
@@ -55,7 +55,7 @@ const ProductDetails = () => {
         <div className="flex max-w-[1440px] mx-auto justify-center mt-14 bg-white lg:h-[450px]  flex-col md:flex-row items-center gap-8 p-8  rounded-xl ">
           <div className="flex-shrink-0">
             <img
-              src={bike.image}
+              src={bike?.image}
               alt="Product Image"
               className="rounded-xl h-[300px] object-cover shadow-md"
             />
@@ -63,22 +63,22 @@ const ProductDetails = () => {
 
           <div className="max-w-lg text-gray-800">
             <h3 className="uppercase text-gray-500 text-sm mb-1">Bike</h3>
-            <h1 className="text-3xl font-semibold mb-4">{bike.name}</h1>
+            <h1 className="text-3xl font-semibold mb-4">{bike?.name}</h1>
             <p className="text-xl font-bold text-gray-900 mb-2">
-              {bike.price}Tk
+              {bike?.price}Tk
             </p>
 
-            <p className="text-gray-600 mb-6">{bike.description}</p>
+            <p className="text-gray-600 mb-6">{bike?.description}</p>
 
             <div className="flex items-center mb-6">
               <label className="mr-3 text-gray-700">
-                Stock:{bike.inStock ? "Available" : "Out OF Stock"}
+                Stock:{bike?.inStock ? "Available" : "Out OF Stock"}
               </label>
             </div>
 
             <div className="flex space-x-4 ">
               {" "}
-              {bike.inStock ? (
+              {bike?.inStock ? (
                 <>
                   <Link to="/checkout">
                     <button

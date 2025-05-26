@@ -20,6 +20,12 @@ import CheckOut from "../Pages/UserProtectedPage/CheckOut";
 import VerifyOrder from "../Pages/UserProtectedPage/VerifyOrder";
 import ProtectedRoute from "../Components/Layout/ProtectedRoute";
 import TotalRevenue from "../Pages/TotalRevenue";
+import ProductName from "../Components/ProductName";
+// import NewsLetterSection from "../Components/NewsLetterSection";
+import NewsletterTable from "../Pages/AdminPage/ManageNews";
+import Allinformation from "../Pages/AdminPage/Allinformation";
+import Profile from "../Components/Profile";
+import InformationOfUser from "../Pages/UserProtectedPage/InformationUser";
 
 export const route = createBrowserRouter([
   {
@@ -39,6 +45,11 @@ export const route = createBrowserRouter([
         path: "/products/:id",
 
         element: <ProductDetails />,
+      },
+      {
+        path: "/product/:name",
+
+        element: <ProductName />,
       },
       {
         path: "/checkout",
@@ -94,6 +105,20 @@ export const route = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
+      {
+        path: "information",
+        element: (
+          <ProtectedRoute role="customer">
+            <InformationOfUser />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "profile",
+        element: (
+          <Profile user={{ name: "", email: "", role: "", iat: 0, exp: 0 }} />
+        ),
+      },
     ],
   },
   {
@@ -105,11 +130,25 @@ export const route = createBrowserRouter([
     ),
     children: [
       {
+        path: "homeDash",
+        element: (
+          <ProtectedRoute role="admin">
+            <Allinformation />
+          </ProtectedRoute>
+        ),
+      },
+      {
         path: "manageorder",
         element: (
           <ProtectedRoute role="admin">
             <ManageOrder />
           </ProtectedRoute>
+        ),
+      },
+      {
+        path: "profile",
+        element: (
+          <Profile user={{ name: "", email: "", role: "", iat: 0, exp: 0 }} />
         ),
       },
 
@@ -150,6 +189,14 @@ export const route = createBrowserRouter([
         element: (
           <ProtectedRoute role="admin">
             <TotalRevenue />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "newsLatter",
+        element: (
+          <ProtectedRoute role="admin">
+            <NewsletterTable />
           </ProtectedRoute>
         ),
       },

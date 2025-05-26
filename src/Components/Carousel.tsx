@@ -1,29 +1,32 @@
 import sda from "../assets/sda.jpg";
-import image from "../assets/imgbike.jpg";
-import bike from "../assets/ead3cb204295869.Y3JvcCwzMjY2LDI1NTUsMTI5LDA.jpg";
+import image from "../assets/slider-motorcycle-25-03-v2.webp";
+import bike from "../assets/download.webp";
 
 const Carousel = () => {
   return (
-    <div>
-      <div className="carousel w-7xl translate-x-24 h-[400px] ">
+    <div className="w-full">
+      {/* Full-Width Carousel */}
+      <div className="carousel w-full h-[400px] md:h-[500px] rounded-none">
         <div id="item1" className="carousel-item w-full">
-          <img src={sda} className="w-7xl" />
+          <img src={sda} className="w-full object-cover" alt="Slide 1" />
         </div>
         <div id="item2" className="carousel-item w-full">
-          <img src={image} className="w-7xl" />
+          <img src={image} className="w-full object-cover" alt="Slide 2" />
         </div>
         <div id="item3" className="carousel-item w-full">
-          <img src={bike} className="w-7xl" />
+          <img src={bike} className="w-full object-cover" alt="Slide 3" />
         </div>
       </div>
-      <div className="flex w-full justify-center gap-2 py-2 mb-4">
-        <a href="#item1" className="btn btn-xs">
+
+      {/* Pagination Buttons */}
+      <div className="flex justify-center gap-4 py-4">
+        <a href="#item1" className="btn btn-sm btn-outline">
           1
         </a>
-        <a href="#item2" className="btn btn-xs">
+        <a href="#item2" className="btn btn-sm btn-outline">
           2
         </a>
-        <a href="#item3" className="btn btn-xs">
+        <a href="#item3" className="btn btn-sm btn-outline">
           3
         </a>
       </div>
