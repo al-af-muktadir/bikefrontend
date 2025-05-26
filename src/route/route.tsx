@@ -15,16 +15,16 @@ import ManageProduct from "../Pages/AdminPage/ManageProduct";
 import AdminDashboard from "../Pages/AdminPage/AdminDashboard";
 import UpdateProducts from "../Pages/AdminPage/UpdateProducts";
 import Products from "../Pages/Products";
-import ProductDetails from "../Components/ProductDetails";
+import ProductDetails from "../components/ProductDetails";
 import CheckOut from "../Pages/UserProtectedPage/CheckOut";
 import VerifyOrder from "../Pages/UserProtectedPage/VerifyOrder";
-import ProtectedRoute from "../Components/Layout/ProtectedRoute";
+import ProtectedRoute from "../components/Layout/ProtectedRoute";
 import TotalRevenue from "../Pages/TotalRevenue";
-import ProductName from "../Components/ProductName";
+import ProductName from "../components/ProductName";
 // import NewsLetterSection from "../Components/NewsLetterSection";
 import NewsletterTable from "../Pages/AdminPage/ManageNews";
 import Allinformation from "../Pages/AdminPage/Allinformation";
-import Profile from "../Components/Profile";
+import Profile from "../components/Profile";
 import InformationOfUser from "../Pages/UserProtectedPage/InformationUser";
 
 export const route = createBrowserRouter([

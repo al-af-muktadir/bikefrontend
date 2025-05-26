@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { toast, Toaster } from "sonner";
 import { useRegisterMutation } from "../api/AuthApi";
-import NavbarLogin from "../Components/LoginNavbar";
+import NavbarLogin from "../components/LoginNavbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../redux/storeHooks";
 import { setUser } from "../Slice/AuthStore";

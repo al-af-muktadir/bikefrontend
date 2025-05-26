@@ -4,7 +4,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useLoginMutation } from "../api/AuthApi";
 import loginpic from "../assets/login.png";
-import NavbarLogin from "../Components/LoginNavbar";
+import NavbarLogin from "../components/LoginNavbar";
 import { useAppDispatch } from "../redux/storeHooks";
 import { setUser } from "../Slice/AuthStore";
 import { verifyToken } from "../util/VerifyToken";
