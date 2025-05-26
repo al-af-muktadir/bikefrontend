@@ -19,13 +19,16 @@ const NewsLetterSection = () => {
               name: name as string,
             };
             console.log(newsData);
-            const res = await fetch("http://localhost:3000/api/news", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(newsData),
-            });
+            const res = await fetch(
+              "https://bike-store-backend-ovyb.vercel.app/api/news",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newsData),
+              }
+            );
 
             const data = await res.json();
             if (data.status === "success") {

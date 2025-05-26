@@ -12,7 +12,9 @@ const NewsletterTable = () => {
   // Fetch all subscribers
   const fetchSubscribers = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/news");
+      const res = await fetch(
+        "https://bike-store-backend-ovyb.vercel.app/api/news"
+      );
       const data = await res.json();
       //   setSubscribers(data);
       setSubscribers(data?.data);
@@ -35,9 +37,12 @@ const NewsletterTable = () => {
     if (!confirm) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/api/news/${email}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `https://bike-store-backend-ovyb.vercel.app/api/news/${email}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (res.ok) {
         setSubscribers(subscribers.filter((sub) => sub.email !== email));
