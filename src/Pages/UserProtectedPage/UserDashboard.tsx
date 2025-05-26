@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import NavbarLogin from "../../components/LoginNavbar";
+import NavbarLogin from "../../folders/LoginNavbar";
 
 import { useState } from "react";
 import { FaBars } from "react-icons/fa"; // Changed to FaBars for a standard menu icon

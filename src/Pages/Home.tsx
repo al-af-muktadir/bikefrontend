@@ -1,13 +1,13 @@
 import { Helmet } from "react-helmet-async";
 // import Banner from "../Components/Banner";
-import Carousel from "../components/Carousel";
-import Testimonial from "../components/Testimonial";
+import Carousel from "../folders/Carousel";
+import Testimonial from "../folders/Testimonial";
 
 import Product from "./UserProtectedPage/Product";
-import NewsLetterSection from "../components/NewsLetterSection";
-import MegaNavbar from "../components/MegaNavbar";
-import QnADrawer from "../components/QandASection";
-import HowItWorks from "../components/ExtraSection";
+import NewsLetterSection from "../folders/NewsLetterSection";
+import MegaNavbar from "../folders/MegaNavbar";
+import QnADrawer from "../folders/QandASection";
+import HowItWorks from "../folders/ExtraSection";
 
 const Home = () => {
   //(user, token);
