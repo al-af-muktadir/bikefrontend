@@ -23,7 +23,7 @@ const Products = () => {
     limit,
   });
 
-  const bikes = data?.data || [];
+  const bikes = data?.data?.data || [];
   const brands = [...new Set(bikes?.map((bike: any) => bike.brand))];
   const totalPages = data?.totalPages || 1;
 

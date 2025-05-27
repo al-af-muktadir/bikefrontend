@@ -14,15 +14,15 @@ const ManageProduct = () => {
 
   // Extract all brands and categories dynamically from data for filter dropdown options
   const allBrands = Array.from(
-    new Set(data?.data?.map((product: any) => product.brand) || [])
+    new Set(data?.data?.data?.map((product: any) => product.brand) || [])
   );
   const allCategories = Array.from(
-    new Set(data?.data?.map((product: any) => product.category) || [])
+    new Set(data?.data?.data?.map((product: any) => product.category) || [])
   );
 
   // Filter products based on selected brand and category
   const filteredProducts =
-    data?.data?.filter((product: any) => {
+    data?.data?.data?.filter((product: any) => {
       const brandMatch = brandFilter ? product.brand === brandFilter : true;
       const categoryMatch = categoryFilter
         ? product.category === categoryFilter

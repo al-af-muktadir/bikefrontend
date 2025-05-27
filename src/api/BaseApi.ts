@@ -4,7 +4,7 @@ import { RootState } from "../redux/store";
 import { logout, setUser } from "../Slice/AuthStore";
 import { verifyToken } from "../util/VerifyToken";
 const baseQuery = fetchBaseQuery({
-  baseUrl: "https://bike-store-backend-ovyb.vercel.app/api",
+  baseUrl: "https://bike-store-backend-inky.vercel.app/api",
   credentials: "include",
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.token;
@@ -21,19 +21,19 @@ const BaseQueryRefresh = async (args: any, api: any, extraOptions: any) => {
   //("baseAPi", result);
   if (result?.error?.status === 401) {
     const res = await fetch(
-      "https://bike-store-backend-ovyb.vercel.app/api/auth/refreshToken",
+      "https://bike-store-backend-inky.vercel.app/api/auth/refreshToken",
       {
         method: "POST",
         credentials: "include",
       }
     );
     const data = await res.json();
-    //("refershres", data);
+    console.log("data", data);
 
     if (data?.data?.accesstoken) {
       // const user = (api.getState() as RootState).auth.user;
       const user = verifyToken(data?.data?.accesstoken);
-      //("setting user", user);
+      // console.log("user", data);
       api.dispatch(
         setUser({
           user,

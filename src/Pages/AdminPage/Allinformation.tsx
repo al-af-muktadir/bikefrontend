@@ -19,7 +19,7 @@ const InformationPage = () => {
   const fetchUsers = async () => {
     try {
       const res = await fetch(
-        "https://bike-store-backend-ovyb.vercel.app/api/user"
+        "https://bike-store-backend-inky.vercel.app/api/user"
       );
       const data = await res.json();
       console.log("Fetched Users:", data);
@@ -33,7 +33,7 @@ const InformationPage = () => {
   const fetchSubscribers = async () => {
     try {
       const res = await fetch(
-        "https://bike-store-backend-ovyb.vercel.app/api/news"
+        "https://bike-store-backend-inky.vercel.app/api/news"
       );
       const data = await res.json();
       setTotalSubscribers(data.data.length || 0);

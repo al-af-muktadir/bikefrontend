@@ -31,7 +31,7 @@ const ManageOrder = () => {
     }
   };
   const filteredData =
-    data?.data?.filter((order: any) => {
+    data?.data?.data?.filter((order: any) => {
       const statusMatch = statusFilter ? order.status === statusFilter : true;
 
       const orderMethod = order.transaction?.method?.toLowerCase() || "";

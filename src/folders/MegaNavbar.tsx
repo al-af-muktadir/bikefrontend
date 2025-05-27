@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { useGetProductsQuery } from "../api/productApi";
 
 const MegaNavbar = () => {
-  const { data, isLoading } = useGetProductsQuery({ search: "" });
-  const bikeNames = data?.data?.map((bike: any) => bike.name) || [];
+  const { data, isLoading, isError } = useGetProductsQuery({});
+  // const { data, isLoading, isError } = useGetAllProductQuery(undefined);
+  console.log(data, isError, "thisismeganav");
+  const bikeNames = data?.data?.data?.map((bike: any) => bike.name) || [];
 
   return (
     <nav className="bg-[#ECE3D2] px-4 py-3 shadow-md ml-20">

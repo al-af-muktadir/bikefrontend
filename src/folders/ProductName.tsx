@@ -6,7 +6,7 @@ const ProductName = () => {
   const { name } = useParams();
   const { data, isLoading } = useGetProductsQuery({ search: name });
 
-  const matchedProducts = data?.data?.filter(
+  const matchedProducts = data?.data?.data?.filter(
     (bike: any) => bike.name?.toLowerCase() === name?.toLowerCase()
   );
 

@@ -18,15 +18,17 @@ const Orders = () => {
 
   // Extract unique statuses and transaction methods for dropdown options
   const allStatuses = Array.from(
-    new Set(data?.data?.map((order: any) => order.status) || [])
+    new Set(data?.data?.data?.map((order: any) => order.status) || [])
   );
   const allMethods = Array.from(
-    new Set(data?.data?.map((order: any) => order.transaction.method) || [])
+    new Set(
+      data?.data?.data?.map((order: any) => order.transaction.method) || []
+    )
   );
 
   // Filter orders by status and method
   const filteredOrders =
-    data?.data?.filter((order: any) => {
+    data?.data?.data?.filter((order: any) => {
       const statusMatch = statusFilter ? order.status === statusFilter : true;
       const methodMatch = methodFilter
         ? order.transaction.method === methodFilter

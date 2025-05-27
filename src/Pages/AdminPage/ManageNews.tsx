@@ -13,7 +13,7 @@ const NewsletterTable = () => {
   const fetchSubscribers = async () => {
     try {
       const res = await fetch(
-        "https://bike-store-backend-ovyb.vercel.app/api/news"
+        "https://bike-store-backend-inky.vercel.app/api/news"
       );
       const data = await res.json();
       //   setSubscribers(data);
@@ -38,7 +38,7 @@ const NewsletterTable = () => {
 
     try {
       const res = await fetch(
-        `https://bike-store-backend-ovyb.vercel.app/api/news/${email}`,
+        `https://bike-store-backend-inky.vercel.app/api/news/${email}`,
         {
           method: "DELETE",
         }

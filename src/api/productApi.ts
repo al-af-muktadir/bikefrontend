@@ -13,7 +13,7 @@ const productApi = baseApi.injectEndpoints({
         if (maxPrice) params.append("maxPrice", maxPrice);
         if (page) params.append("page", page.toString());
         if (limit) params.append("limit", limit.toString());
-
+        console.log(params.toString());
         return { url: `/products?${params.toString()}`, method: "GET" };
       },
       providesTags: ["product"],
@@ -42,6 +42,13 @@ const productApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ["product"],
     }),
+    getAllProduct: builder.query({
+      query: () => ({
+        url: `/products`,
+        method: "GET",
+      }),
+      providesTags: ["product"],
+    }),
     getByName: builder.query({
       query: ({ data }) => ({
         url: `/product/${data}`,
@@ -53,6 +60,7 @@ const productApi = baseApi.injectEndpoints({
 
 export const {
   useGetProductsQuery,
+  useGetAllProductQuery,
   useCreateProductMutation,
   useUpdateProductMutation,
   useGetSepeceficProductQuery,

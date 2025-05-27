@@ -20,7 +20,7 @@ const NewsLetterSection = () => {
             };
             console.log(newsData);
             const res = await fetch(
-              "https://bike-store-backend-ovyb.vercel.app/api/news",
+              "https://bike-store-backend-inky.vercel.app/api/news",
               {
                 method: "POST",
                 headers: {

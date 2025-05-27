@@ -4,7 +4,12 @@ import { useGetProductsQuery } from "../../api/productApi";
 
 const Product = () => {
   const { data, isLoading } = useGetProductsQuery({});
-  const bikes = !isLoading ? data?.data?.slice(0, 6) : [];
+  console.log(data, "this is product");
+  const bikes = !isLoading
+    ? data?.data?.data
+      ? data?.data?.data?.slice(0, 6)
+      : []
+    : [];
 
   const skeletonArray = Array(6).fill(0);
 

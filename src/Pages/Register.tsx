@@ -64,7 +64,7 @@ const Register = () => {
       //(userData);
       if (imageUrl) {
         const res = await register(userData);
-
+        console.log(res, "res");
         const user = verifyToken(res.data.data as string);
         dispatch(setUser({ user, token: res.data }));
         setIsLoading(false);
