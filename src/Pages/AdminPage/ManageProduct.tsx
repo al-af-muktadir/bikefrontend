@@ -54,7 +54,7 @@ const ManageProduct = () => {
           className="border p-2 rounded-md"
         >
           <option value="">All Brands</option>
-          {allBrands.map((brand) => (
+          {allBrands?.map((brand) => (
             <option key={String(brand)} value={String(brand)}>
               {String(brand)}
             </option>
@@ -70,7 +70,7 @@ const ManageProduct = () => {
           className="border p-2 rounded-md"
         >
           <option value="">All Categories</option>
-          {allCategories.map((category) => (
+          {allCategories?.map((category) => (
             <option key={String(category)} value={String(category)}>
               {String(category)}
             </option>
@@ -101,7 +101,7 @@ const ManageProduct = () => {
                 </td>
               </tr>
             ) : currentProducts.length ? (
-              currentProducts.map((product: any) => (
+              currentProducts?.map((product: any) => (
                 <tr key={product._id} className="border-b hover:bg-gray-50">
                   <td className="px-4 py-2 border">{product.name}</td>
                   <td className="px-4 py-2 border">{product.brand}</td>

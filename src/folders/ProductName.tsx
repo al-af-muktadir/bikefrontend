@@ -22,7 +22,7 @@ const ProductName = () => {
         </div>
       ) : matchedProducts?.length ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {matchedProducts.map((bike: any) => (
+          {matchedProducts?.map((bike: any) => (
             <div
               key={bike._id}
               className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow"

@@ -24,7 +24,7 @@ const Products = () => {
   });
 
   const bikes = data?.data || [];
-  const brands = [...new Set(bikes.map((bike: any) => bike.brand))];
+  const brands = [...new Set(bikes?.map((bike: any) => bike.brand))];
   const totalPages = data?.totalPages || 1;
 
   const handlePageChange = (newPage: number) => {
@@ -79,7 +79,7 @@ const Products = () => {
               }}
             >
               <option value="">All Brands</option>
-              {brands.map((b) => (
+              {brands?.map((b) => (
                 <option key={String(b)} value={String(b)}>
                   {String(b)}
                 </option>
@@ -138,7 +138,7 @@ const Products = () => {
           ) : (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                {bikes.map((bike: any) => (
+                {bikes?.map((bike: any) => (
                   <div
                     key={bike._id}
                     className="bg-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-gray-200"
@@ -185,7 +185,7 @@ const Products = () => {
                   Previous
                 </button>
 
-                {[...Array(totalPages)].map((_, i) => (
+                {[...Array(totalPages)]?.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => handlePageChange(i + 1)}

@@ -86,7 +86,7 @@ const InformationPage = () => {
                   outerRadius={100}
                   label
                 >
-                  {data.map((_, index) => (
+                  {data?.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index]} />
                   ))}
                 </Pie>

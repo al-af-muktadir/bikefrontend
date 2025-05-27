@@ -54,7 +54,7 @@ const ManageUser = () => {
               ) : (
                 <>
                   {customers.length ? (
-                    customers.map((user: any) => (
+                    customers?.map((user: any) => (
                       <tr key={user._id} className="border-b hover:bg-gray-50">
                         <td className="px-4 py-2 border">{user.name}</td>
                         <td className="px-4 py-2 border">{user.email}</td>

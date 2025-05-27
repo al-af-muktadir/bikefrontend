@@ -31,7 +31,7 @@ const AdminDashboard = () => {
             { to: "manageuser", label: "Manage User Deactivation" },
             { to: "totalrevenue", label: "Total Revenue" },
             { to: "newsLatter", label: "Manage News" },
-          ].map(({ to, label }) => (
+          ]?.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}

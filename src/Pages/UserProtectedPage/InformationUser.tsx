@@ -63,7 +63,7 @@ const InformationOfUser = () => {
                   outerRadius={100}
                   label
                 >
-                  {chartData.map((_, index) => (
+                  {chartData?.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index]} />
                   ))}
                 </Pie>

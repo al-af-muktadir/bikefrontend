@@ -74,7 +74,7 @@ const NewsletterTable = () => {
             </tr>
           </thead>
           <tbody>
-            {subscribers.map((sub) => (
+            {subscribers?.map((sub) => (
               <tr
                 key={sub.email}
                 className="border-b hover:bg-gray-50 transition"

@@ -94,7 +94,7 @@ const ManageOrder = () => {
                 </td>
               </tr>
             ) : currentOrders.length ? (
-              currentOrders.map((order: any) => (
+              currentOrders?.map((order: any) => (
                 <tr key={order._id} className="border-b hover:bg-gray-50">
                   <td className="px-4 py-2 border">{order.transaction.id}</td>
                   <td className="px-4 py-2 border">{order.User}</td>

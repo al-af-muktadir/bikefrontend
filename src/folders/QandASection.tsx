@@ -36,7 +36,7 @@ const QnADrawer = () => {
         Frequently Asked Questions
       </h2>
       <div className="space-y-4">
-        {questionsAnswers.map((item, index) => (
+        {questionsAnswers?.map((item, index) => (
           <div
             key={index}
             className="border rounded-xl overflow-hidden shadow-sm"

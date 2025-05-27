@@ -58,7 +58,7 @@ const Orders = () => {
           className="border p-2 rounded-md"
         >
           <option value="">All Statuses</option>
-          {allStatuses.map((status) => (
+          {allStatuses?.map((status) => (
             <option key={String(status)} value={String(status)}>
               {String(status)}
             </option>
@@ -74,7 +74,7 @@ const Orders = () => {
           className="border p-2 rounded-md"
         >
           <option value="">All Methods</option>
-          {allMethods.map((method) => (
+          {allMethods?.map((method) => (
             <option key={String(method)} value={String(method)}>
               {String(method)}
             </option>
@@ -102,7 +102,7 @@ const Orders = () => {
               </td>
             </tr>
           ) : currentOrders.length ? (
-            currentOrders.map((order: any) => (
+            currentOrders?.map((order: any) => (
               <tr key={order.id} className="border-b hover:bg-gray-50">
                 <td className="px-4 py-2 border">{order.transaction.id}</td>
                 <td className="px-4 py-2 border">{order.User}</td>

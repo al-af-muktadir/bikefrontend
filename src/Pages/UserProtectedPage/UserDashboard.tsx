@@ -28,7 +28,7 @@ const UserDashboard = () => {
             { to: "orders", label: "My Order" },
             { to: "profile", label: "My Profile" },
             { to: "information", label: "All Information" },
-          ].map(({ to, label }) => (
+          ]?.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}

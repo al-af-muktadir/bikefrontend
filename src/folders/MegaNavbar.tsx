@@ -10,7 +10,7 @@ const MegaNavbar = () => {
     <nav className="bg-[#ECE3D2] px-4 py-3 shadow-md ml-20">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-4">
         {!isLoading &&
-          bikeNames.map((name: string, idx: number) => (
+          bikeNames?.map((name: string, idx: number) => (
             <Link
               key={idx}
               to={`/product/${encodeURIComponent(name)}`}

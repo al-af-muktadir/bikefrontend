@@ -30,7 +30,7 @@ const Testimonial = () => {
           What Our Customers Say
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
+          {testimonials?.map((testimonial) => (
             <div
               key={testimonial.id}
               className="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105"

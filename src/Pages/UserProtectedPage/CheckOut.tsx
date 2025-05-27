@@ -47,7 +47,7 @@ const CheckoutPage = () => {
         <p>Your cart is empty.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {cart.items.map((item) => (
+          {cart.items?.map((item) => (
             <div
               key={item.product}
               className="border shadow-lg p-4 rounded-2xl bg-white hover:shadow-2xl transition"
